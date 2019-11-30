@@ -1,0 +1,650 @@
+<!doctype html>
+<html>
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Fonts-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/fonts/fontawesome/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/fonts/pe-icon/pe-icon.css">
+	<!-- Vendors-->
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/vendors/bootstrap/grid.css">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/vendors/magnific-popup/magnific-popup.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/vendors/swiper/swiper.css">
+	<!-- App & fonts-->
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/assets/css/main.css">
+	<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<![endif]-->
+	<link rel="icon" href="{{ SITEURL }}/assets/uploads/2019/10/cropped-ico-1-32x32.jpg" sizes="32x32" />
+	<link rel="icon" href="{{ SITEURL }}/assets/uploads/2019/10/cropped-ico-1-192x192.jpg" sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed" href="{{ SITEURL }}/assets/uploads/2019/10/cropped-ico-1-180x180.jpg" />
+	<meta name="msapplication-TileImage" content="{{ SITEURL }}/assets/uploads/2019/10/cropped-ico-1-270x270.jpg" />
+  {% endblock %}
+</head>
+
+<body>
+	  <!-- preload -->
+	<div class="preload" id="preload">
+	  <div class="cssload-spin-box"></div>
+	</div>
+	<!-- End / preload -->
+	
+	<div class="page-wrap"> 
+		<!-- header -->
+		<header class="header header-fixheight header--fixed">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header-logo">
+						<a href="/">
+							<img src="{{ SITEURL }}/assets/img/logo_white2.png" alt="{{ SITENAME }}" title="{{ SITENAME }}" width="149" height="40"/>
+						</a>
+					</div>
+					<!-- raising-nav -->
+					<nav class="raising-nav"> 
+						<!-- raising-menu -->
+						<ul class="raising-menu">
+							{% for title, link in MENUITEMS %}
+							<li><a href="{{ link }}">{{ title }}</a></li>
+							{% endfor %}
+						</ul>
+						<!-- raising-menu -->
+						<div class="navbar-toggle"><i class="fa fa-bars"></i></div>
+					</nav>
+					<!-- End / raising-nav -->			
+				</div>
+			</div>
+		</header>
+		<!-- End / header --> 
+		<div class="md-content"> 
+			<!-- hero -->
+			<hero class="hero"> 
+				<div class="swiper swiper-container">
+					<div class="hero__wrapper" style="background-image: url('{% block bg_img %}assets/img/slider/3.jpg{% endblock %}');">
+						<div class="hero__inner">
+							<div class="container">
+								<h1 class="hero__title" style=" margin-top:50px;">{{ WEBENTITLE }}</h1>
+								<p class="hero__desc">{{ WEBTITLE }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</hero>
+			<!-- End / hero --> 
+		
+			<div class="container">
+				<p>
+					<div style=" border: solid 1px #333; color:#333; text-align:left; padding:10px;">{{ WEBDESC }}</div>
+				</p>
+			</div>
+			<div class="container">
+				<div class="row">
+				  <div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+					
+					<!-- sec-title -->
+					<div class="sec-title sec-title__lg-title md-text-center">
+					  <h2 class="sec-title__title" style="margin-top:50px;" id="id1">我们的优势</h2>
+					  <span class="sec-title__divider"></span>
+					  <span class="text-uppercase" style="color:#CCC; font-size:14px;">Our advantages</span>
+					  </div>
+					<!-- End / sec-title --> 
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 "> 
+					<!-- team -->
+					<div class="team">
+					  <div class="w3_agileits_services_grid_1 text-center">
+									<i class="fa fa-calculator fa-3x" aria-hidden="true"></i>
+								</div>
+					  <div class="team__body text-center">
+						<div class="team__user">
+						  <h5 class="team__name"></br>价格优惠</h5>
+						  <span style="color:#CCC;font-size:14px;">厂家直供，主要生产销售建筑配件</span></div>
+					  </div>
+					</div>
+					<!-- End / team --> 
+					
+				  </div>
+				  <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 "> 
+					
+					<!-- team -->
+					<div class="team">
+					  <div class="w3_agileits_services_grid_1 text-center">
+									<i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
+								</div>
+					  <div class="team__body text-center">
+						<div class="team__user">
+						  <h5 class="team__name"></br>质量上乘</h5>
+						  <span style="color:#CCC;font-size:14px;">入库的产品，均经过严格检测</span> </div>
+					   </div>
+					</div>
+					<!-- End / team --> 
+					
+				  </div>
+				  <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4 "> 
+					
+					<!-- team -->
+					<div class="team">
+					  <div class="w3_agileits_services_grid_1 text-center">
+									<i class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i>
+								</div>
+					  <div class="team__body text-center">
+						<div class="team__user">
+						  <h5 class="team__name"></br>服务优质</h5>
+						  <span style="color:#CCC;font-size:14px;">始终坚持“信誉第一，质量第一”的经营宗旨</span> </div>
+					  </div>
+					</div>
+					<!-- End / team --> 
+					
+				  </div>
+				</div>
+			</div>
+			<section class="md-section" style="background-color:#f9f9f9;padding:0px 0;">
+				<div class="container">
+					<div class="row" style="background-image:url(assets/img/about/2.jpg); padding:60px 10px 0px 10px; background-position:center;">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center" >
+								<h2 class="sec-title__title" id="id2">关于我们</h2>
+								<span class="sec-title__divider">About Us</span>
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+						<div class="col-lg-12 ">
+							<div class="mb-0"></br>　　邯郸市永年区宁坡紧固件制造有限公司，厂家位于有中国紧固件之乡之称的永年区西南工业区。主要生产销售：钢筋套筒、穿墙螺杆(穿墙丝、止水螺杆、山型件、山型母)、扣件及扣件螺丝、顶托、步步紧、止水钢板(止水带)、钢支撑、斜支撑等建筑配件类产品。其中钢筋套筒、穿墙螺杆、扣件及扣件螺丝、钢支撑、斜支撑、顶托、步步紧等有现货库存。入库的产品都建立了严格的质量保证体系，均经过严格检测。公司成立于公元2016年，始终坚持“信誉第一，质量第一”的经营宗旨，产品的质量与员工服务得到了客户及业界人士的一致好评，产品畅销全国各地，认真履行合同、诚信经营，在市场信誉卓著，赢得众多客户信赖！通过不断发展壮大，宁坡紧固件现已成为当地紧固件领域知名的生产销售商。公司于2018年荣获“河北省产品质量检验合格企业”，“河北省诚信单位”等称号。<br />公司市场部设在交通便利的永年区标准件新商城内1区01栋01号。<br />热诚欢迎业界同仁来公司参观洽谈！！！<br /></br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="md-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title" id="id3">产品介绍</h2>
+								<span class="sec-title__divider">Product Introduction</span>
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+						<!--图片-->
+						<div class="col-lg-12">
+							<div class="products_img">
+								<img src="assets/img/service/5-1.jpg" alt="" style="text-align:center;"/>
+							</div>
+							<div class="services__desc" style="float:left; ">
+								<span style="font-size:22px; color:#999; margin-right:10px;"><a href="#">钢筋套筒</a></span>现货供应直螺纹钢筋套筒(国标、中标、非标)、冷挤压钢筋套筒、灌浆钢筋套筒，滚丝机及配件等产品，规格支撑定制
+							</div>
+						</div>
+						<!--图片-->
+						<!--图片-->
+						<div class="col-lg-12">
+							<div class="products_img">
+								<img src="assets/img/service/001.jpg" alt="" style="text-align:center;"/>
+							</div>
+							<div class="services__desc" style=" float:left;">
+								<span style="font-size:22px; color:#999; margin-right:10px;"><a href="#">穿墙螺杆</a></span>现货供应各种规格穿墙螺杆、穿墙丝、三段式止水螺杆及配件、山型件、山型母等产品，规格支撑定制
+							</div>
+						</div>
+						<!--图片-->
+						<!--图片-->
+						<div class="col-lg-12">
+							<div class="products_img">
+								<img src="assets/img/service/5-3.jpg" alt="" style="text-align:center;"/>
+							</div>
+							<div class="services__desc" style=" float:left;">
+								<span style="font-size:22px; color:#999; margin-right:10px;"><a href="#">钢支撑类</a></span>现货供应钢支撑及支撑配件、斜支撑、小支撑等产品，规格支撑定制
+							</div>
+						</div>
+						<!--图片-->
+						<!--图片-->
+						<div class="col-lg-12">
+							<div class="products_img">
+								<img src="assets/img/service/5.jpg" alt="" style="text-align:center;"/>
+							</div>
+							<div class="services__desc" style=" float:left;">
+								<span style="font-size:22px; color:#999; margin-right:10px;">
+									<a href="#">扣件</a>
+								</span>
+								供应英标扣件、玛钢扣件、钢板扣件、扣件配件(丁字丝&lt;现货&gt;、螺栓&lt;现货&gt;、小叶、接棒)等，规格支撑定制
+							</div>
+						</div>
+						<!--图片-->
+					</div>
+				</div>
+			</section>
+			<section class="md-section" id="id3">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title">其他产品</h2>
+								<span class="sec-title__divider">Products</span> 
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+					</div>
+					<div class="row row-eq-height">
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4"> 
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/002.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">顶托</a>
+								</h2>
+								<div class="services__desc">
+									供应500mmX28mm~500mmX34mm规格顶托
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4"> 
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/003.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">步步紧</a>
+								</h2>
+								<div class="services__desc">
+									供应定制600mm~1200mm，厚度4mm~7mm步步紧
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4"> 
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/004.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">止水钢板</a>
+								</h2>
+								<div class="services__desc">
+									现货供应宽度350mm，厚度3mm止水钢板、中埋/外贴止水带、止水条
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4"> 
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/005.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">马凳</a>
+								</h2>
+								<div class="services__desc">
+									现货供应粗度5mm，长700mm~1000mm马凳，支持定制长度
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>          
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/006.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">铝模板配件</a>
+								</h2>
+								<div class="services__desc">							
+								供应定制销钉、销片、K板螺母、垫片、方通扣、工作凳、钩子、锤子、墙板开模器、顶板开模器、撬棍、K板扳手等各种铝模板配件
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4"> 
+							<!-- services -->
+							<div class="services">
+								<div class="services__img">
+									<img src="assets/img/class/007.jpg" alt=""/>
+								</div>
+								<h2 class="services__title">
+									<a href="#">脚手架</a>
+								</h2>
+								<div class="services__desc">
+									现货供应移动脚手架、手提脚手架、脚手架配件
+								</div>
+							</div>
+							<!-- End / services --> 
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<p>
+						<button type="button" class="btn btn-default btn-lg">PC建筑钢筋套筒(预埋)</button>
+						<button type="button" class="btn btn-default btn-lg">地角螺栓</button>
+						<button type="button" class="btn btn-default btn-lg">钢筋支架垫块</button>
+						<button type="button" class="btn btn-default btn-lg">护网</button>
+					</p>
+				</div>
+			</section>
+			<section class="md-section" style="background-color:#fff;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title" id="id4">部分合作工程</h2>
+								<span class="sec-title__divider">Cooperative Engineering</span> 
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+					</div>
+					<!-- gallery-wrap -->
+					<div class="gallery-wrap gallery-album">
+						<div class="grid-css grid-css--grid" data-col-lg="4" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
+							<div class="grid__inner">	
+								<div class="grid-sizer"></div>
+								<!-- grid-item -->
+								<div class="grid-item large">
+									<div class="grid-item__inner">
+										<div class="grid-item__content-wrapper"> 
+											<!-- gallery -->
+											<div class="gallery gallery--grid">
+												<div class="gallery__image bg-image" style="background-image: url(assets/img/gallery/9.jpg);">
+													<img src="assets/img/gallery/9.jpg" alt="How to Create and"/>
+													<a class="gallery__overlay mfp-image" href="assets/img/gallery/9.jpg" data-effect="mfp-zoom-in" title="Design a Perfect">
+														<div class="md-tb">
+															<div class="md-tb__cell md-text-center">
+																<i class="fa fa-search"></i>
+															</div>
+														</div>
+													</a> 
+												</div>
+											</div>
+											<!-- End / gallery --> 
+										</div>
+									</div>
+								</div>
+								<!-- End / grid-item -->              
+								<!-- grid-item -->
+								<div class="grid-item wide">
+									<div class="grid-item__inner">
+										<div class="grid-item__content-wrapper"> 
+											<!-- gallery -->
+											<div class="gallery gallery--grid">
+												<div class="gallery__image bg-image" style="background-image: url(assets/img/gallery/10.jpg);">
+													<img src="assets/img/gallery/10.jpg" alt="How to Master"/>
+													<a class="gallery__overlay mfp-image" href="assets/img/gallery/10.jpg" data-effect="mfp-zoom-in" title="Using Memes in Your">
+														<div class="md-tb">
+															<div class="md-tb__cell md-text-center">
+																<i class="fa fa-search"></i>
+															</div>
+														</div>
+													</a> 
+												</div>
+											</div>
+											<!-- End / gallery --> 
+										</div>
+									</div>
+								</div>
+								<!-- End / grid-item --> 
+								<!-- grid-item -->
+								<div class="grid-item">
+									<div class="grid-item__inner">
+										<div class="grid-item__content-wrapper"> 
+											<!-- gallery -->
+											<div class="gallery gallery--grid">
+												<div class="gallery__image bg-image" style="background-image: url(assets/img/gallery/11.jpg);">
+													<img src="assets/img/gallery/11.jpg" alt="7 UI Choices That"/>
+													<a class="gallery__overlay mfp-image" href="assets/img/gallery/11.jpg" data-effect="mfp-zoom-in" title="Free PSD Files">
+														<div class="md-tb">
+															<div class="md-tb__cell md-text-center">
+																<i class="fa fa-search"></i>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<!-- End / gallery -->                     
+										</div>
+									</div>
+								</div>
+								<!-- End / grid-item --> 
+								<!-- grid-item -->
+								<div class="grid-item">
+									<div class="grid-item__inner">
+										<div class="grid-item__content-wrapper"> 
+											<!-- gallery -->
+											<div class="gallery gallery--grid">
+												<div class="gallery__image bg-image" style="background-image: url(assets/img/gallery/12.jpg);">
+													<img src="assets/img/gallery/12.jpg" alt="Using Memes in Your"/>
+													<a class="gallery__overlay mfp-image" href="assets/img/gallery/12.jpg" data-effect="mfp-zoom-in" title="Is UX Really That">
+														<div class="md-tb">
+															<div class="md-tb__cell md-text-center">
+																<i class="fa fa-search"></i>
+															</div>
+														</div>
+													</a>
+												</div>
+											</div>
+											<!-- End / gallery --> 
+										</div>
+									</div>
+								</div>
+								<!-- End / grid-item --> 
+							</div>
+						</div>
+					</div>
+					<!-- End / gallery-wrap --> 
+				</div>
+			</section>
+			<section class="md-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title" id="id5">公司资质</h2>
+								<span class="sec-title__divider">Cooperative Engineering</span>
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+					</div>
+					<!-- swiper swiper-container -->
+					<div class="swiper swiper-container" data-options='{"slidesPerView":3,"spaceBetween":30,"breakpoints":{"600":{"slidesPerView":1},"991":{"slidesPerView":2,"spaceBetween":30}}}'>
+						<div class="swiper-wrapper">
+							<div class="testimonial-item"> 
+								<!-- quote -->
+								<blockquote class="quote">
+									<div class="services__img">
+										<img src="assets/img/zz/1.jpg" alt=""/>
+									</div>
+								</blockquote>
+								<!-- End / quote --> 
+							</div>
+							<div class="testimonial-item"> 
+								<!-- quote -->
+								<blockquote class="quote">
+									<div class="services__img">
+										<img src="assets/img/zz/2.jpg" alt=""/>
+									</div>
+								</blockquote>
+								<!-- End / quote --> 
+							</div>
+							<div class="testimonial-item"> 
+								<!-- quote -->
+								<blockquote class="quote">
+									<div class="services__img">
+										<img src="assets/img/zz/3.jpg" alt=""/>
+									</div>
+								</blockquote>
+								<!-- End / quote --> 
+							</div>
+							<div class="testimonial-item"> 
+								<!-- quote -->
+								<blockquote class="quote">
+									<div class="services__img">
+										<img src="assets/img/zz/4.jpg" alt=""/>
+									</div>
+								</blockquote>
+								<!-- End / quote --> 
+							</div>
+						</div>
+					</div>
+					<!-- End / swiper swiper-container --> 
+				</div>
+			</section>
+			<section class="md-section"style="background-color:#fff;padding:0px;">
+				<div class="container">
+					<div class="row" style="margin:20px 0px;">
+						<div class="col-lg-12">
+							<h2 class="sec-title__title"id="id6">联系我们</h2>
+							<span class="sec-title__divider"></span> 
+							<div class="widget-contact__item">
+								<span class="widget-contact__title">电话：</span>
+								<p class="widget-contact__text">
+									<a href="tel:18531032888">18531032888</a>(同微信)
+								</p>
+							</div>
+							<p class="mb-30">公司厂址：河北省邯郸市永年区西南工业园区</p>
+							<div class="widget-contact__item">
+								<span class="widget-contact__title">电话：</span>
+								<p class="widget-contact__text">
+									<a href="tel:18631096687 ">18631096687 </a>
+								</p>
+							</div>
+							<p class="mb-30">销售处：河北省邯郸市永年区新商城1区01栋01号</p>
+							<div class="widget-contact__item">
+								<span class="widget-contact__title">邮箱：</span>
+								<p class="widget-contact__text">
+									<a href="#">service@ningpojgj.cn</a>
+								</p>
+							</div>
+							<div class="widget-contact__item">
+								<span class="widget-contact__title">工作时间：</span>
+								<p class="widget-contact__text">9:00--18:00</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="md-section md-skin-dark" style="background-image:url(assets/img/bg/demo.jpg&quot;);padding-bottom:50px;">
+				<div class="md-overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 "> 
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title">我们的部门</h2>
+								<span class="sec-title__divider"></span>
+							</div>
+							<!-- End / sec-title --> 
+						</div>
+					</div>
+					<div class="row">
+						{% for title, link in LINKS %}
+						<div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"> 
+							<!-- team -->
+							<div class="team">
+								<div class="team__body">
+									<div class="team__user">
+										<h3 class="team__name">
+											<a href="{{ link }}">{{ title }}</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+							<!-- End / team --> 
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		</div>
+	
+	<div class="main_nav_bottom">
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container" align="center">
+				<style>
+					.nav-tabs
+					{
+						text-align: center;
+						height: 40px;
+						line-height: 40px;
+					}
+				</style>
+				<ul class="nav nav-tabs nav-tabs-justified">
+					<div class="row" align="center">
+						<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+							<li>
+								<a href="tel:18631096687">马上电话联系</a>
+							</li>
+						</div>
+					</div>
+				</ul>
+			</div>
+		</nav>
+	</div>  
+	<!-- footer-01 -->
+	<footer>
+		<!-- copyright-01 -->
+		<div class="copyright-01 md-text-center">
+			<div class="container">
+				<p class="copyright-01__copy"><a href='http://buildingfittings.cn' target='_blank'>邯郸市永年区宁坡紧固件制造有限公司</a> © All rights reserved. {{ IPC_CODE }} 技术支持：16631055359</p>
+			</div>
+		</div>
+		<!-- End / copyright-01 --> 
+		<!-- 占位 -->
+		<div class="copyright-01 md-text-center">
+			<div class="container">
+				<p class="copyright-01__copy"></p>
+			</div>
+		</div>
+	</footer>
+  </div>
+    <div class="main_nav_bottom">
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container" align="center">
+                <style>
+                .nav-tabs
+                {
+                    text-align: center;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                </style>
+                <ul class="nav nav-tabs nav-tabs-justified">
+                    <div class="row" align="center">
+						<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+							<li>
+								<a href="tel:18631096687">马上电话联系</a>
+							</li>
+						</div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>  
+	<!-- End / footer-01 --> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/jquery/jquery.min.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/isotope-layout/isotope.pkgd.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/masonry-layout/masonry.pkgd.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/swiper/swiper.jquery.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/jquery-one-page/jquery.nav.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/menu/menu.js"></script> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script> 
+	<!-- App--> 
+	<script type="text/javascript" src="{{ SITEURL }}/assets/js/main.js"></script>
+</body>
+</html>
